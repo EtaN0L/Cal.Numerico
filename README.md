@@ -3,4 +3,4 @@ Métodos de Cálculo Numérico
 Feitos em rust
 
 ## Método da bissecção
-Arquivo [main](metodo-bisseccao/src/main.rs)
+Arquivo [main.rs](metodo-bisseccao/src/main.rs)
