@@ -11,5 +11,5 @@ Arquivo [main.rs](falsa-posicao/src/main.rs)
 ## Método do ponto fixo
 Arquivo [main.rs](ponto-fixo/src/main.rs)
 
-## Método de newton
+## Método de Newton-Rhapson
 Arquivo [main.rs](metodo-newton/src/main.rs)
