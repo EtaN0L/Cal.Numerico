@@ -1,1 +1,0 @@
-C:\Users\chris\Documents\Trabs\ IFCE\Cálculo\ Numérico\Cal.Numerico\metodo-newton\target\debug\metodo-newton.exe: C:\Users\chris\Documents\Trabs\ IFCE\Cálculo\ Numérico\Cal.Numerico\metodo-newton\src\main.rs
