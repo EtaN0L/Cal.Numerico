@@ -8,13 +8,13 @@ fn main() {// Início da entrada de dados
     io::stdin()
     .read_line(&mut a)
     .expect("Falha ao ler.");
-    let mut a:f64 = a.trim().parse().expect("Erro1");
+    let a:f64 = a.trim().parse().expect("Erro1");
 
     println!("Digite o limite b:");
     io::stdin()
     .read_line(&mut b)
     .expect("Falha ao ler.");
-    let mut b:f64 = b.trim().parse().expect("Erro1.2");
+    let b:f64 = b.trim().parse().expect("Erro1.2");
 
     println!("Digite a tolerancia:");
     io::stdin()
@@ -40,13 +40,13 @@ fn abs(x:f64) -> f64 {//função para calcular o valor absoluto de um número(m�
     y
 }
 
-fn bissec(mut x:f64,mut y:f64,E:f64) -> f64 { // O método da bisseção em si
+fn bissec(mut x:f64,mut y:f64,err:f64) -> f64 { // O método da bisseção
     let mut fx = funcao(x);
     let mut fy = funcao(y);
     let mut c:f64;
-    while abs(y-x) > E { // Enquanto |b-a| for maior que a tolerancia ele vai rodar
+    while abs(y-x) > err { // Enquanto |b-a| for maior que a tolerancia ele vai rodar
         c = (x+y)/2.0;        
-        let mut fc = funcao(c);
+        let fc = funcao(c);
         if fx * fc < 0.0 {
             y = c;
             fy = fc;
