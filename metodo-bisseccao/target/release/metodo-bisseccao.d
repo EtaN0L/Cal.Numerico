@@ -1,0 +1,1 @@
+C:\Users\chris\Documents\Trabs\ IFCE\Cálculo\ Numérico\Cal.Numerico\metodo-bisseccao\target\release\metodo-bisseccao.exe: C:\Users\chris\Documents\Trabs\ IFCE\Cálculo\ Numérico\Cal.Numerico\metodo-bisseccao\src\main.rs

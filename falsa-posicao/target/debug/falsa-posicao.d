@@ -1,1 +1,0 @@
-C:\Users\chris\Documents\Trabs\ IFCE\Cálculo\ Numérico\Cal.Numerico\falsa-posicao\target\debug\falsa-posicao.exe: C:\Users\chris\Documents\Trabs\ IFCE\Cálculo\ Numérico\Cal.Numerico\falsa-posicao\src\main.rs
