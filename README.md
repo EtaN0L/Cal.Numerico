@@ -13,3 +13,6 @@ Arquivo [main.rs](ponto-fixo/src/main.rs)
 
 ## Método de Newton-Rhapson
 Arquivo [main.rs](metodo-newton/src/main.rs)
+
+## Método da secante
+Arquivo [main.rs](metodo-secante/src/main.rs)
