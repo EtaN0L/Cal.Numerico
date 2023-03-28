@@ -1,4 +1,4 @@
-use std::{io, process::exit};
+use std::{io, process::{exit, Command}};
 fn main() {// Início da entrada de dados
     let mut a = String::new();
     let mut b = String::new();
@@ -27,7 +27,10 @@ fn main() {// Início da entrada de dados
         exit(0);
     }
 
-    println!("A raiz aproximada é: {:.3}",bissec(a, b, erro));// printa a raiz
+    println!("A raiz aproximada é: {:.6}",bissec(a, b, erro));// printa a raiz
+    
+
+    let _ = Command::new("pause").status();
 
 }
 
@@ -42,14 +45,14 @@ fn abs(x:f64) -> f64 {//função para calcular o valor absoluto de um número(m�
 
 fn bissec(mut x:f64,mut y:f64,err:f64) -> f64 { // O método da bisseção
     let mut fx = funcao(x);
-    let mut fy = funcao(y);
+    let mut _fy = funcao(y);
     let mut c:f64;
     while abs(y-x) > err { // Enquanto |b-a| for maior que a tolerancia ele vai rodar
         c = (x+y)/2.0;        
         let fc = funcao(c);
         if fx * fc < 0.0 {
             y = c;
-            fy = fc;
+            _fy = fc;
         }else {
             x = c;
             fx = fc;
