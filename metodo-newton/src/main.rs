@@ -16,10 +16,10 @@ fn main() {
  
 }
 
-fn funcao(x:f64) -> f64 { // a função
+fn funcao(x:f64) -> f64 { // a função, x-cos(x)
     x - x.cos()
 }
 
-fn funcaoderivada(x:f64) -> f64 { // a derivada da função
+fn funcaoderivada(x:f64) -> f64 { // a derivada da função, 1+sen(x)
     1.0 + x.sin()
 }

@@ -1,0 +1,1 @@
+C:\Users\chris\Documents\Trabs\ IFCE\Cálculo\ Numérico\Cal.Numerico\metodo-secante\target\debug\metodo-secante.exe: C:\Users\chris\Documents\Trabs\ IFCE\Cálculo\ Numérico\Cal.Numerico\metodo-secante\src\main.rs
