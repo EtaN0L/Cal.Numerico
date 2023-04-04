@@ -1,8 +1,8 @@
 
 fn main() {
-    let x0:f64 = 1.5; // O intervalo a é 1.5
-    let x1:f64 = 1.7; // O intervalo b é 1.7
-    let mut x:f64 = x0 - funcao(x0)/funcaophi(x0, x1); //Inicializado o valor x
+    let x0:f64 = 1.5; // O x0 é 1.5
+    let x1:f64 = 1.7; // O x1 é 1.7
+    let mut x:f64 = x0 - funcao(x0)/funcaophi(x0, x1);
 
     for i in 1..1000 {
         let xx = x - funcao(x)/funcaophi(x0, x1);
