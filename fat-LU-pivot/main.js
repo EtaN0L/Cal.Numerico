@@ -65,3 +65,9 @@ const { L, U, P } = LuFactorization(matrix);
 console.log("Matriz L:", L);
 console.log("Matriz U:", U);
 console.log("Matriz P:", P);
+
+//MATRIZ:
+
+2  1 -1
+-3 -1  2
+-2  1  2
