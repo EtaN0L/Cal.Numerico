@@ -22,7 +22,7 @@ Arquivo [main.rs](metodo-secante/src/main.rs)
 
 # Algoritmos N2
 ## Método da eliminação de gauss
-Link [pasta](metodo-gauss)
+Link [pasta](elim-gauss)
 
 ## Método da eliminação de gauss com pivoteamento parcial
 Link [pasta](elim-gauss-pivot)
