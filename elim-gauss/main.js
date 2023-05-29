@@ -47,8 +47,9 @@ const matrix = [
 const solution = GaussElimination(matrix);
 console.log(solution);
 
-//MATRIZ;
+/*MATRIZ;
 
 2x + y - z = 8
 -3x - y + 2z = -11
 -2x + y + 2z = -3
+*/
