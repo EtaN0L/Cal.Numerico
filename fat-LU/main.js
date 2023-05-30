@@ -10,9 +10,9 @@ function LuFactorization(matrix) {
     U[i] = new Array(n).fill(0);
   }
 
-  // Inicializa o vetor b com zeros
+  // Preenche o vetor b com os valores fornecidos
   for (let i = 0; i < n; i++) {
-    b[i] = 0;
+    b[i] = matrix[i][n]; // Última coluna da matriz
   }
 
   // Calcula a matriz U e a matriz L (com diagonal principal igual a 1)
@@ -60,13 +60,12 @@ function LuFactorization(matrix) {
 }
 
 // Exemplo de uso
-const matrix = [
-  [2, 1, -1],
-  [-3, -1, 2],
-  [-2, 1, 2],
+const matrix = [ // o vetor b é o ultimo caractere de cada linha
+  [2, 1, -1, 8],
+  [-3, -1, 2, -11],
+  [-2, 1, 2, -3],
 ];
 
-const b = [1, 2, 3]; // Vetor b do sistema Lc = b
 const { L, U, c } = LuFactorization(matrix);
 console.log("Matriz L:", L);
 console.log("Matriz U:", U);
