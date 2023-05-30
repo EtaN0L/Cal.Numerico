@@ -2,11 +2,17 @@ function LuFactorization(matrix) {
   const n = matrix.length;
   const L = [];
   const U = [];
+  const b = [];
 
   // Inicializa as matrizes L e U com zeros
   for (let i = 0; i < n; i++) {
     L[i] = new Array(n).fill(0);
     U[i] = new Array(n).fill(0);
+  }
+
+  // Inicializa o vetor b com zeros
+  for (let i = 0; i < n; i++) {
+    b[i] = 0;
   }
 
   // Calcula a matriz U e a matriz L (com diagonal principal igual a 1)
@@ -40,7 +46,17 @@ function LuFactorization(matrix) {
     }
   }
 
-  return { L, U };
+  // Calcula o vetor solução c resolvendo Lc = b
+  const c = [];
+  for (let i = 0; i < n; i++) {
+    let sum = 0;
+    for (let j = 0; j < i; j++) {
+      sum += L[i][j] * c[j];
+    }
+    c[i] = (b[i] - sum) / L[i][i];
+  }
+
+  return { L, U, c };
 }
 
 // Exemplo de uso
@@ -50,12 +66,8 @@ const matrix = [
   [-2, 1, 2],
 ];
 
-const { L, U } = LuFactorization(matrix);
+const b = [1, 2, 3]; // Vetor b do sistema Lc = b
+const { L, U, c } = LuFactorization(matrix);
 console.log("Matriz L:", L);
 console.log("Matriz U:", U);
-
-/*MATRIZ:
-2  1 -1
--3 -1  2
--2  1  2
-*/
+console.log("Vetor solução c:", c);
