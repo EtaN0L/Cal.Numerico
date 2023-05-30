@@ -3,12 +3,14 @@ function LuFactorization(matrix) {
   const L = [];
   const U = [];
   const P = [];
+  const solution = [];
 
-  // Inicializa as matrizes L, U e P com zeros
+  // Inicializa as matrizes L, U, P e o vetor de solução com zeros
   for (let i = 0; i < n; i++) {
     L[i] = new Array(n).fill(0);
     U[i] = new Array(n).fill(0);
     P[i] = new Array(n).fill(0);
+    solution[i] = 0;
   }
 
   // Inicializa a matriz P como matriz identidade
@@ -30,15 +32,19 @@ function LuFactorization(matrix) {
       }
     }
 
-    // Troca as linhas da matriz original, matriz P e matriz L
+    // Troca as linhas da matriz original, matriz P, matriz L e vetor de solução
     [matrix[i], matrix[maxIndex]] = [matrix[maxIndex], matrix[i]];
     [P[i], P[maxIndex]] = [P[maxIndex], P[i]];
     [L[i], L[maxIndex]] = [L[maxIndex], L[i]];
+    [solution[i], solution[maxIndex]] = [solution[maxIndex], solution[i]];
 
     // Copia a linha i para a matriz U
     for (let j = 0; j < n; j++) {
       U[i][j] = matrix[i][j];
     }
+
+    // Copia o valor da solução para o vetor de solução
+    solution[i] = matrix[i][n];
 
     // Calcula a coluna i da matriz L
     for (let j = i + 1; j < n; j++) {
@@ -51,24 +57,26 @@ function LuFactorization(matrix) {
     }
   }
 
-  return { L, U, P };
+  return { L, U, P, solution };
 }
 
 // Exemplo de uso
 const matrix = [
-  [2, 1, -1],
-  [-3, -1, 2],
-  [-2, 1, 2],
+  [2, 1, -1, 8],
+  [-3, -1, 2, -11],
+  [-2, 1, 2, -3],
 ];
 
-const { L, U, P } = LuFactorization(matrix);
+const { L, U, P, solution } = LuFactorization(matrix);
 console.log("Matriz L:", L);
 console.log("Matriz U:", U);
 console.log("Matriz P:", P);
+console.log("Vetor de Solução:", solution);
 
-/*MATRIZ:
+/*
+MATRIZ:
 
-2  1 -1
--3 -1  2
--2  1  2
+2  1 -1 |  8
+-3 -1  2 | -11
+-2  1  2 | -3
 */
