@@ -22,16 +22,16 @@ Arquivo [main.rs](metodo-secante/src/main.rs)
 
 # Algoritmos N2
 ## Método da eliminação de gauss
-Link [pasta](elim-gauss)
+Arquivo [main.js](elim-gauss/main.js)
 
 ## Método da eliminação de gauss com pivoteamento parcial
-Link [pasta](elim-gauss-pivot)
+Arquivo [main.js](elim-gauss-pivot/main.js)
 
 ## Método da fatoração LU
-Link [pasta](fat-LU)
+Arquivo [main.js](fat-LU/main.js)
 
 ## Método da fatoração LU com pivoteamento parcial
-Link [pasta](fat-LU-pivot)
+Arquivo [main.js](fat-LU-pivot/main.js)
 
 ## Método de Cholensky
-Link [pasta](cholensky)
+Arquivo [main.js](cholensky/main.js)
