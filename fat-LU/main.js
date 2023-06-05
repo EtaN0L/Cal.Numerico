@@ -59,12 +59,21 @@ function LuFactorization(matrix) {
   return { L, U, c };
 }
 
+const prompt = require("prompt-sync")();
 // Exemplo de uso
-const matrix = [ // o vetor b é o ultimo caractere de cada linha
-  [2, 1, -1, 8],
-  [-3, -1, 2, -11],
-  [-2, 1, 2, -3],
-];
+//const matrix = [ [2, 1, -1, 8], [-3, -1, 2, -11], [-2, 1, 2, -3]];
+// o vetor b é o ultimo caractere de cada linha
+
+//entrada de dados
+var matrix = [];
+for (let m1 = 0; m1 < 3; m1++) {
+  matrix[m1] = [];
+  for (let m2 = 0; m2 < 4; m2++) {
+    matrix[m1][m2] = parseInt(prompt("Digite o valor para a posição [" + m1 + "][" + m2 + "]:"));
+    console.log("Número: ", matrix[m1][m2]);
+  }
+}
+
 
 const { L, U, c } = LuFactorization(matrix);
 console.log("Matriz L:", L);
