@@ -29,12 +29,19 @@ function CholeskyFactorization(matrix) {
   return L;
 }
 
+const prompt = require("prompt-sync")();
 // Exemplo de uso
-const matrix = [
-  [4, 12, -16],
-  [12, 37, -43],
-  [-16, -43, 98]
-];
+//const matrix = [[4, 12, -16], [12, 37, -43], [-16, -43, 98]];
+
+//entrada de dados
+var matrix = [];
+for (let m1 = 0; m1 < 3; m1++) {
+  matrix[m1] = [];
+  for (let m2 = 0; m2 < 3; m2++) {
+    matrix[m1][m2] = parseInt(prompt("Digite o valor para a posição [" + m1 + "][" + m2 + "]:"));
+    console.log("Número: ", matrix[m1][m2]);
+  }
+}
 
 const L = CholeskyFactorization(matrix);
 console.log(L);
