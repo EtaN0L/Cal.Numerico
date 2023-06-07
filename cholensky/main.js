@@ -1,32 +1,32 @@
 function CholeskyFactorization(matrix) {
   const n = matrix.length;
-  const L = [];
+  const G = [];
 
-  // Inicializar a matriz L com zeros
+  // Inicializar a matriz G com zeros
   for (let i = 0; i < n; i++) {
-    L[i] = new Array(n).fill(0);
+    G[i] = new Array(n).fill(0);
   }
 
   for (let i = 0; i < n; i++) {
     for (let j = 0; j <= i; j++) {
       let sum = 0;
       if (j === i) {
-        // Calcular os elementos da diagonal principal de L
+        // Calcular os elementos da diagonal principal de G
         for (let k = 0; k < j; k++) {
-          sum += L[j][k] * L[j][k];
+          sum += G[j][k] * G[j][k];
         }
-        L[j][j] = Math.sqrt(matrix[j][j] - sum);
+        G[j][j] = Math.sqrt(matrix[j][j] - sum);
       } else {
-        // Calcular os elementos fora da diagonal principal de L
+        // Calcular os elementos fora da diagonal principal de G
         for (let k = 0; k < j; k++) {
-          sum += L[i][k] * L[j][k];
+          sum += G[i][k] * G[j][k];
         }
-        L[i][j] = (matrix[i][j] - sum) / L[j][j];
+        G[i][j] = (matrix[i][j] - sum) / G[j][j];
       }
     }
   }
 
-  return L;
+  return G;
 }
 
 const prompt = require("prompt-sync")();
@@ -43,5 +43,22 @@ for (let m1 = 0; m1 < 3; m1++) {
   }
 }
 
-const L = CholeskyFactorization(matrix);
-console.log(L);
+const G = CholeskyFactorization(matrix);
+
+// Transpor a matriz G para obter a matriz transposta G^T
+const GT = [];
+for (let i = 0; i < G.length; i++) {
+  GT[i] = [];
+  for (let j = 0; j < G.length; j++) {
+    GT[i][j] = G[j][i];
+  }
+}
+
+console.log("Matriz G:");
+console.log(G[0]);
+console.log(G[1]);
+console.log(G[2]);
+console.log("Matriz Transposta G^T:");
+console.log(GT[0]);
+console.log(GT[1]);
+console.log(GT[2]);
